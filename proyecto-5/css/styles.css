@@ -1,0 +1,69 @@
+:root {
+  --color1:#d2691e;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*::before ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--color1);
+  background-image: url(../img/backgroud.jpg);
+  background-position: right 50% vw bottom 50% vh, left 50% vw top 50% vh;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tarjeta {
+  background-color: white;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.tarjeta-cabeza {
+  width: 100%;
+  display: block;
+}
+.tarjeta-cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tarjeta-cuerpo-img {
+  margin-top: -60px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  background-color: aliceblue;
+  box-shadow: -5px -3px 9px #000;
+}
+.tarjeta-cuerpo-img-img {
+  padding: 50px;
+}
+.tarjeta-pie-de-pagina {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid #000;
+}
+.tarjeta-pie-de-pagina-energia {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.tarjeta-pie-de-pagina-actividad {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.tarjeta-pie-de-pagina-movilidad {
+  margin-bottom: 20px;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */

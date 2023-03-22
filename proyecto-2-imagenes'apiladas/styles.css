@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+}
+
+.imagenes-container {
+    margin: 250px auto;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.imagenes-container .imagen {
+    position: relative;
+    margin-right: 20px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.imagenes-container .imagen img {
+    border-radius: 15px;
+    transition: traform 3s;
+}
+
+.imagenes-container .imagen .nombre {
+    position: absolute;
+    background-color: orangered;
+    border-radius: 10px;
+    color: wheat;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -70px;
+    left: calc(-50% -50%);
+    padding: 2px;
+}
+
+.imagenes-container .imagen .nombre .texto {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.imagenes-container .imagen:hover .nombre {
+    display: inline-block;
+}
+
+.imagenes-container .imagen .nombre::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin-top: 1px;
+    left: 45%;
+    bottom: -20px;
+    border-top: 10px solid orangered;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.imagenes-container .imagen:hover img {
+    transform:translateY(-25px);
+}
+
+@media (max-width:600px) {
+    .imagenes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagenes-container .imagen {
+        width: 200px;
+    }
+    .imagenes-container .imagen .nombre::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        left: 45%;
+        bottom: -20px;
+        border-top: 10px solid orangered;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+}

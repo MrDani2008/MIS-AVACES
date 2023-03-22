@@ -1,0 +1,84 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+}
+/*contenedor principal ,este controla e fodo principal de la web*/
+.contenedor {
+    background: linear-gradient( to bottom left, #ccc 50%,#5f9ea5 50%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+/*contededor de todo el contenido visible y lejible*/
+.contenedor .sub-contenedor {
+    width: 600px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 10px 5px 10px  rgba(0, 0, 0, 0.3);
+}
+.contenedor .sub-contenedor:hover {
+    transform: translateY(-10px)translateX(5px);
+}
+/*contenedor de el logo de bancopopular y textos aledaños*/
+.contenedor .sub-contenedor .contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    flex: auto;
+    margin-bottom: 20px;
+}
+/*contenedor de la imagen del logo banco popular*/ 
+.contenedor .sub-contenedor .contenido .icono {
+    margin-top: 10px;
+}
+.contenedor .sub-contenedor .contenido .mensaje .titel .text {
+    font-weight:bolder;           
+}
+/*bottom seccion (.actions) apartado de estilos*/
+.contenedor .sub-contenedor .actions {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+/*personalisacion de botones*/
+.contenedor .sub-contenedor .actions button {
+    border: none;
+    outline: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.contenedor .sub-contenedor .actions .btn-descargar {
+     background-color: rgb(0, 0, 255 , 0.3);
+}
+/*boton:hover*/
+.contenedor .sub-contenedor .actions .btn-descargar:hover {
+    transform: translateY(-5px)translateX(2px);
+    box-shadow: 1px 1px 10px rgba(138, 138, 160, 1);
+    background-color: #fff;
+}
+
+.contenedor .sub-contenedor .actions .btn-recargar:hover {
+    transform: translateY(-5px) translateX(2px);
+    box-shadow: 1px 1px 15px rgba(138, 138, 160, 1);
+    background-color: #fff;
+}
+
+@media (max-width:600px) {
+    .contenedor .sub-contenedor {
+        flex-direction: column;
+        margin: 20px 10px;
+    }
+    .contenedor .sub-contenedor .actions {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
